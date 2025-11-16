@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProFunk Audio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <header>
-    <nav>
-        <div class="logo">
-            <img src="/assets/images/logo.png" alt="ProFunk Audio Logo">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/images/logo.png" alt="ProFunk Audio Logo">
+            </div>
+            
+            <div class="nav-separator-line"></div> 
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li class="nav-home">
+                    <span class="dot"></span>
+                    <a href="#" class="nav-item">Home</a>
+                </li>
+                <li><a href="#" class="nav-item">About</a></li>
+                <li><a href="#" class="nav-item">Saira Condensed</a></li>
+                <li><a href="#" class="contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <section class="hero-video-section">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="assets/video/background video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="video-overlay"></div>
+        <div class="video-gradient-blur"></div>
+
+        <div class="hero-grid-overlay">
+            <div class="line-vertical-grid line-vertical-1"></div> 
+            <div class="line-vertical-grid line-vertical-2"></div> 
+            <div class="line-horizontal-grid line-horizontal-1"></div>
+            <div class="line-horizontal-grid line-horizontal-2"></div>
         </div>
+        
+        <div class="hero-content">
+            <h1>Sound Stories</h1>
+            <p>Over 160,000 stunning sound effects (SFX) and over 650 royalty <br> free music tracks free for commercial and non commercial use.</p>
+            <a href="#" class="explore-btn">
+                Explore <span class="arrow-icon">&#x21B3;</span> 
+            </a>
+        </div>
+    </section>
 
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="nav-links">
-            <li class="nav-home">
-                <span class="dot"></span>
-                <a href="#" class="nav-item">Home</a>
-            </li>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-            <li><a href="#" class="nav-item">About</a></li>
-         
-            <li><a href="#" class="contact-btn">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-    <main>
-        </main>
-
-    <script src="assets/js/script.js"></script>
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
-
 </html>
