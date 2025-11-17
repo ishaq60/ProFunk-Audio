@@ -378,3 +378,315 @@
         left: calc(488 / 1920 * 100%); 
     }
 }
+
+
+
+
+
+/*  */
+
+
+.main-content-area {
+    /* Dimensions and Layout */
+    width: 1920px;
+    height: 898px; /* Fixed height can sometimes cause layout issues; consider using min-height or auto */
+    
+    /* Spacing and Padding */
+    gap: 40px; /* Note: 'gap' only works if the container is a flex or grid layout */
+    padding: 80px 300px 80px 300px; /* Top Right Bottom Left */
+    
+    /* Background and Appearance */
+    background: #F8F2EA;
+    border-radius: 60px;
+    opacity: 1;
+    
+    /* Transformation (Standard CSS for 'angle: 0 deg') */
+    transform: rotate(0deg); 
+
+    /* If 'gap' is desired, you need to enable flex or grid: */
+    /* display: flex; 
+    flex-direction: column; */ 
+}
+/* --- 1. Main Section Container (.sound-section-header) --- */
+.sound-section-header {
+    /* Dimensions and Layout */
+    width: 1320px;
+    height: 114px;
+    display: flex; /* Required for 'justify-content: space-between' */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content groups */
+    margin: 0 auto; /* Center the entire section */
+
+    /* Appearance */
+    opacity: 1;
+    transform: rotate(0deg); 
+    /* The provided image shows a rounded, light background for the surrounding area. 
+       This section is assumed to be inside the .main-content-area background (#F8F2EA) 
+       from your previous request, so we won't give it its own background here. */
+}
+
+/* --- 2. Title (h2.section-title) --- */
+.sound-section-header .section-title {
+    /* Dimensions and Layout */
+    width: 418px;
+    height: 73px;
+    margin: 0; /* Remove default margins */
+
+    /* Typography */
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 700; /* Bold */
+    line-height: 130%;
+    letter-spacing: 0; /* 0% */
+    color: #1D1F2C; /* Background: #1D1F2C (Dark color for text against light background) */
+
+    /* Appearance */
+    opacity: 1;
+    transform: rotate(0deg); 
+}
+
+/* --- 3. Paragraph (p.section-description) --- */
+.sound-section-header .section-description {
+    /* Dimensions and Layout */
+    width: 455px;
+    height: 29px;
+    margin: 8px 0 0 0; /* Add small top margin for spacing from title */
+
+    /* Typography */
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 400; /* Regular */
+    line-height: 160%;
+    letter-spacing: 0px;
+    color: #777980; /* Background: #777980 (Grey color for text) */
+
+    /* Appearance */
+    opacity: 1;
+    transform: rotate(0deg); 
+}
+
+/* Grouping the title and paragraph vertically */
+.sound-section-header .header-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --- 4. Button Container (button.section-button) --- */
+.sound-section-header .section-button {
+    /* Dimensions and Spacing */
+    width: 195px;
+    height: 48px;
+    padding: 10px 32px; /* Top/Bottom 10px, Left/Right 32px */
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    /* Appearance */
+    background: #1D1F2C;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transform: rotate(0deg);
+    
+    /* Typography of the text 'All Sound Categories' */
+    color: #FFFFFF; /* Foreground text color */
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500; /* Medium */
+    line-height: 1; /* Match the button's vertical centering */
+    letter-spacing: 0px;
+}
+
+/* Note: The button text 'All Sound Categories' has its own specified width (131px), 
+   but since it's just text inside the button, we apply the typography to the button 
+   and let the button's padding define the overall size (195px). The 131px width is 
+   the content width within the 195px button. */
+
+
+
+
+   /* Check this path very carefully. Is it '1st image.png', 'image1.png', or 'Image1.png'? */
+/* --- Generic Background Styling (Stays the same) --- */
+
+.image-card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensures it's the base layer */
+    
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Unique Image Assignments --- */
+
+.card-bg-one {
+    /* Image for the Explosion Card */
+    background-image: url('../images/image1.png'); 
+}
+
+.card-bg-two {
+    /* Image for the Forest Card */
+    background-image: url('../images/forest.jpg'); 
+}
+
+.card-bg-three {
+    /* Image for the Sci-Fi Card */
+    background-image: url('../images/scifi.jpg'); 
+}
+
+.card-bg-four {
+    /* Image for the Urban Card */
+    background-image: url('../images/city.jpg'); 
+}
+/* You can continue this pattern for card-bg-five and card-bg-six if you use a 6-card grid. */
+
+
+
+.image-section-container {
+    max-width: 1320px; 
+    margin: 0 auto; 
+    display: grid;
+    gap: 24px;
+    padding: 0 16px; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+}
+
+.image-card {
+    height: 280px; 
+    border-radius: 16px;
+    padding: 24px;
+    opacity: 1;
+    transform: rotate(0deg); 
+
+    position: relative; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    background-size: cover; 
+    background-position: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .image-section-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .image-card.card-wide,
+    .image-card.card-narrow {
+        grid-column: span 1; 
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .image-section-container {
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, 280px); 
+    }
+
+    .image-card.card-wide {
+        width: auto;
+        height: 280px;
+        grid-column: span 2; 
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .image-card.card-narrow {
+        width: auto;
+        height: 280px;
+        grid-column: span 1; 
+    }
+}
+
+.image-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.image-card.card-wide::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28.39%, #000000 100%);
+}
+
+.image-section-container > .image-card:nth-child(6).card-wide::before {
+    background: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 42.86%, #000000 100%),
+        
+}
+
+.image-card.card-narrow::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25%, #000000 100%);
+}
+
+.image-card .card-text {
+    height: 66px; 
+    display: flex;
+    flex-direction: column;
+    gap: 6px; 
+    position: relative; 
+    z-index: 2; 
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.image-card.card-wide .card-text {
+    width: 90%;
+    max-width: 600px;
+}
+.image-card.card-narrow .card-text {
+    width: 90%;
+    max-width: 239px;
+}
+
+.image-card .card-title {
+    margin: 0;
+    height: 31px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700; 
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.005em; 
+    color: #FFFFFF;
+    word-wrap: break-word; 
+}
+
+.image-card .card-subtitle {
+    margin: 0;
+    height: 29px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 400; 
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0px;
+    
+    display: inline-block;
+    padding: 0 4px; 
+    
+    color: #E9E9EA;
+
+}
+
+.image-card.card-wide .card-subtitle,
+.image-card.card-narrow .card-subtitle {
+    width: auto;
+}
+
+
+
+
+
