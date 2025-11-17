@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Saira Condensed', sans-serif; 
+}
+
+:root {
+    --primary-text-color: #1A1A2E;
+    --secondary-text-color: #8C8C8C;
+    --light-background: #F8FAFB;
+    --dark-background: #1A1A2E;
+    --border-color: #E6E9EB;
+    --white-color: #FFFFFF;
+    --hover-dark: #2c2c47;
+    --hover-light: #DFE3E8;
+    --hero-grid-line: #010101;
+}

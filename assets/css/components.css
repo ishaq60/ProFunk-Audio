@@ -1,0 +1,448 @@
+.logo img {
+    width: 146px; 
+    height: 56px;
+    opacity: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-home .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--primary-text-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.nav-item {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+.nav-item:hover {
+    color: var(--hover-dark);
+}
+
+.contact-btn {
+    width: 112px; 
+    height: 48px;
+    border-radius: 8px;
+    background: var(--dark-background);
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+.contact-btn:hover {
+    background: var(--hover-dark);
+}
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20; 
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-text-color);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-btn {
+    margin-top: 75px;
+    width: 120px;
+    height: 48px;
+    padding: 15px 23px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative; 
+
+    backdrop-filter: blur(4px);
+    background: var(--white-color)24; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px; 
+    font-weight: 400;
+    line-height: 1; 
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: var(--white-color)20; 
+}
+
+.explore-btn .arrow-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* --- Media Queries (Existing, adjusted for new section) --- */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 32px; 
+    }
+
+    .explore-btn {
+        margin-top: 50px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 120px; 
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-links {
+        display: flex; 
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 70%; 
+        height: 100vh;
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start; 
+        padding: 100px 30px 20px;
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out; 
+        z-index: 10;
+    }
+    
+    .nav-links.active {
+        right: 0; 
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-home .dot {
+        display: none;
+    }
+
+    .contact-btn {
+        width: 100%; 
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .explore-btn {
+        width: 100px; 
+        height: 40px;
+        padding: 10px 18px;
+        font-size: 16px;
+        margin-top: 40px; 
+    }
+}
+
+.sound-card-section {
+    max-width: 1300px; /* Keep this max-width for centralizing */
+    margin: 0 auto 60px auto; 
+    padding: 0 20px;
+    display: grid;
+    /* CHANGE 1: Explicitly define 3 equal columns for the max-width desktop view */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+}
+
+
+.sound-card {
+
+    width: 100%; 
+    height: 268px; 
+
+    opacity: 1;
+    border: 1px solid var(--border-color); 
+    border-radius: 16px;
+    background-color: var(--light-background);
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 10px;
+}
+
+/* The Tablet Media Query needs adjustment now */
+@media (max-width: 1280px) {
+    .sound-card-section {
+        max-width: 900px; 
+        /* CHANGE 3: Force 2 columns at this breakpoint */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+/* The Mobile Media Query remains fine */
+@media (max-width: 768px) {
+    .sound-card-section {
+        /* Force 1 column layout */
+        grid-template-columns: 1fr;
+        /* ... other properties ... */
+    }
+}
+/* --- Tablet Layout (Max Width 1280px) 📐 --- */
+@media (max-width: 1280px) {
+    .sound-card-section {
+        /* On smaller screens, allow max-width to shrink slightly */
+        max-width: 900px; 
+        /* The 424px minmax will automatically force 2 columns here */
+    }
+}
+
+
+/* --- Mobile Layout (Max Width 768px) 📱 --- */
+@media (max-width: 768px) {
+    .sound-card-section {
+        /* Force 1 column layout */
+        grid-template-columns: 1fr;
+        padding: 0 16px; /* Reduced padding on mobile */
+    }
+
+    .sound-card {
+     
+        height: auto; /* Allow height to adjust */
+        width: 100%; /* Ensure it fills the single column */
+    }
+
+    /* Adjust player bar width inside the card for smaller screens */
+    .sound-card .card-player {
+        width: 90%; 
+        margin-bottom: 15px;
+    }
+}
+/* --- Sound Card Container --- */
+.sound-card {
+    /* Layout */
+    margin-top: 0px;
+    width: 424px;
+    height: 268px;
+    opacity: 1;
+
+    /* Styling */
+    border: 1px solid var(--border-color); 
+    border-radius: 16px;
+    background-color: var(--light-background);
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 10px;
+}
+
+
+.sound-card .card-header {
+    display: flex;
+
+    width: calc(100% - 48px); 
+    height: 80px;
+    align-items: flex-start;
+    padding: 0 24px; 
+    gap: 16px; 
+    margin-bottom: 20px;
+}
+
+.sound-card .card-logo img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 12px;
+    border: 2px solid #FFFFFF;
+    display: block;
+}
+
+.sound-card .card-title {
+    font-family: 'Saira Condensed', sans-serif;
+   
+    height: 62px;
+    font-weight: 600; 
+    font-size: 24px;
+    line-height: 130%;
+    color: #1A1A2E; 
+    margin-bottom: 10px;
+    /* font-style: semibold; - Not a standard CSS property */
+    letter-spacing: 0.005em; 
+    flex-grow: 1; 
+}
+
+
+.sound-card .card-player {
+    /* Center the player bar itself */
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    width: 90%; 
+    
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--hover-light);
+
+    /* Internal Flex Layout to spread content */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 10px 0 8px; 
+    gap: 10px;
+}
+
+.sound-card .card-player .play-btn {
+    /* Dimensions and Shape */
+    width: 32px;
+    height: 32px;
+    
+    /* Layout and Spacing */
+    padding: 7px 6px 7px 8px; /* Top Right Bottom Left (7px 6px 7px 8px) */
+    
+    /* Appearance */
+    opacity: 1;
+    background-color: transparent; /* Assuming you want no background */
+    border: none;
+    cursor: pointer;
+    
+  
+    transform: rotate(0deg); /* If you need rotation functionality */
+    
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sound-card .card-player .play-btn img {
+
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+.sound-card .card-player .volume-btn {
+    /* Dimensions */
+    width: 20px;
+    height: 20px;
+    
+    /* Appearance */
+    opacity: 1;
+    
+    /* Layout */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+    
+ 
+    transform: rotate(0deg); 
+    
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.sound-card .card-player .volume-btn img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.sound-card .waveform {
+
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+
+}
+
+/* Ensure the image scales correctly within the flex item */
+.sound-card .waveform img {
+    width: 100%; /* Make the image fill the waveform container's width */
+    height: 32px;
+    display: block;
+}
+
+/* Style for the time duration */
+.sound-card .card-player .duration {
+    font-size: 14px;
+    color: var(--primary-text-color);
+    flex-shrink: 0; /* Prevent time from being compressed */
+}
+
+
+
+.sound-card .card-utilities {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    flex-grow: 1; 
+}
+
+.sound-card .utility-btn {
+    width: 33.33%; 
+    height: 100%; 
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid var(--border-color); 
+    font-size: 24px; /* Size for the icon/symbol */
+    color: var(--primary-text-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.sound-card .utility-btn:last-child {
+    border-right: none; /* Remove right border from the last button */
+}
+
+.sound-card .utility-btn:hover {
+    background-color: var(--hover-light);
+}
