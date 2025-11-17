@@ -225,3 +225,382 @@ body {
     height: 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+/* ======================================= */
+/* 1. Main Section Container (.sound-advantages-section) */
+/* ======================================= */
+.sound-advantages-section {
+    width: 100%;
+    background-color: #F8F2EA; /* Background color from design context */
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 60px;
+    max-height: 580px;
+}
+
+/* ======================================= */
+/* 2. Header and Typography */
+/* ======================================= */
+.advantage-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 600px;
+}
+
+.advantage-title {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #1D1F2C; 
+    margin: 0 0 10px 0;
+}
+
+.advantage-subtitle {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #777980; 
+    margin: 0;
+}
+
+/* ======================================= */
+/* 3. Advantages Layout Wrapper */
+/* ======================================= */
+.advantages-wrapper {
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;
+  
+    align-items: flex-start; /* Align all cards to the top of the flex row */
+}
+
+/* Responsive stacking for smaller screens */
+@media (max-width: 1024px) {
+    .advantages-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ======================================= */
+/* 4. Individual Advantage Cards (.advantage-card) */
+/* ======================================= */
+.advantage-card {
+    margin-top: 20px;
+    flex: 1; 
+    padding: 30px; 
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+    /* Base min-height for side cards (230px) */
+    min-height: 230px; 
+}
+
+/* Reset height for mobile stacking */
+@media (max-width: 1024px) {
+    .advantage-card {
+        min-height: auto; /* Allow height to adjust to content */
+        width: 90%; 
+        max-width: 500px;
+    }
+}
+
+/* --- Specific Height Overrides --- */
+
+/* Middle Card (advantage-card-light2) -> Must be 260px */
+.advantage-card-light2 {
+    min-height: 260px; /* Specific height requirement */
+}
+/* Ensure the height reset applies to the specific class on mobile too */
+@media (max-width: 1024px) {
+    .advantage-card-light2 {
+        min-height: auto; 
+    }
+}
+
+/* --- Specific Card Styles (Colors) --- */
+
+/* Dark Card (Professionally Recorded Sounds) */
+.advantage-card-dark {
+    background-color: #1D1F2C; 
+    color: #FFFFFF; 
+}
+.advantage-card-dark .card-feature-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+.advantage-card-dark .icon-container {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+/* Light Card (Safe to use & Excellent support) */
+.advantage-card-light,
+.advantage-card-light2 /* Apply general light styles to both light cards */
+{
+    background-color: #FFFFFF;
+    border: 1px solid #ECEFF3;
+    color: #1D1F2C;
+}
+.advantage-card-light .card-feature-description,
+.advantage-card-light2 .card-feature-description {
+    color: #777980;
+}
+.advantage-card-light .icon-container,
+.advantage-card-light2 .icon-container {
+    background-color: #EAEFF2;
+}
+
+
+/* --- Card Content Styles --- */
+
+.icon-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.card-feature-title {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.card-feature-description {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+}
+
+
+
+
+
+
+/* Update the section container to center the header block */
+.profunk-audio-section {
+    /* ... (rest of profunk-audio-section styles) ... */
+    display: flex;
+    flex-direction: column; /* Stack header and potential grid below */
+    align-items: center; /* Center the header block horizontally */
+    /* ... (rest of profunk-audio-section styles) ... */
+}
+
+.profunk-header-block {
+    width: 1320px; /* Explicit width as requested */
+    height: 114px; /* Explicit height as requested */
+    margin-top: 50px;
+    /* Display: flex and justify-content: space-between to push H2 and P to edges */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center content */
+    
+    text-align: center; /* This centers the text *within* H2 and P if they wrap, but the elements themselves are spread */
+    
+    /* Ensure no wrapping padding/margin interferes */
+    box-sizing: border-box; 
+}
+
+.profunk-title {
+    width:539px ;
+    height: 73px;
+    font-size: 56px;
+    color: #1D1F2C;
+    /* Limit the H2 width so it doesn't take up the entire left side */
+ 
+    text-align: left; /* Keep title text left aligned within its column */
+    
+    /* === New properties to force single line === */
+    
+    /* =========================================== */
+}
+
+.profunk-description {
+    color: #777980;
+    font-size: 18px;
+    /* Limit the P width so it doesn't take up the entire right side */
+    width: 600px;
+    text-align: right; /* Keep description text right aligned within its column */
+    /* ... (rest of profunk-description styles) ... */
+}
+/* ======================================= */
+/* MAIN CONTAINER - 3 Column Grid */
+/* ======================================= */
+.profunk-side-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+    max-width: 1320px;
+    gap:18px
+   
+}
+
+/* ======================================= */
+/* 1. FIRST GRID CONTAINER (.first-grid) */
+/* ======================================= */
+.first-grid {
+    width: 648px;
+    grid-column: span 2;
+    height: 180px;
+    background: #F8F2EA;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.first-grid img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    display: block;
+    filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
+}
+
+/* ======================================= */
+/* 2. TEXT WRAPPER (.grid-text-content) */
+/* ======================================= */
+.grid-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ======================================= */
+/* 3. TITLE (.grid-title) */
+/* ======================================= */
+.grid-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1D1F2C;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.005em;
+    line-height: 130%;
+}
+
+.grid-description {
+    color: #777980;
+    font-size: 18px;
+    font-family: 'Saira Condensed', sans-serif;
+    line-height: 160%;
+    margin: 0;
+}
+
+/* ======================================= */
+/* SECOND GRID CONTAINER (.second-grid) */
+/* ======================================= */
+.second-grid {
+    max-width: 312px;
+    height: 180px;
+    background: #F5F5F5;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.second-grid img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    display: block;
+    filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
+}
+
+.grid-title-small {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1D1F2C;
+    margin: 0 0 4px 0;
+    line-height: 130%;
+}
+
+.grid-description-small {
+    font-size: 14px;
+    color: #777980;
+    line-height: 160%;
+    margin: 0;
+}
+
+/* ======================================= */
+/* LAST GRID CONTAINER (.last-grid) */
+/* ======================================= */
+.last-grid {
+    width: 648px;
+    grid-column: span 2;
+    height: 180px;
+    background: #010101;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.last-grid img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.last-grid-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.last-grid-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.005em;
+    line-height: 130%;
+}
+
+.last-grid-description {
+    color: #E9E9EA;
+    font-size: 18px;
+    font-family: 'Saira Condensed', sans-serif;
+    line-height: 160%;
+    margin: 0;
+}
