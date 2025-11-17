@@ -16,7 +16,7 @@ header {
     align-items: center;
     position: relative; 
     z-index: 2; 
-    border-radius: 50px; 
+    border-radius: 55px; 
 }
 
 nav {
@@ -295,7 +295,640 @@ nav {
     line-height: 1;
 }
 
-/* --- Media Queries --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
+
+
+
+
+.latest-sound-effects-header {
+    width: 1320px;
+    height: 95px; /* Explicit height */
+    display: flex;
+    justify-content: space-between; /* Pushes content to opposite ends */
+    align-items: center; /* Vertically center align items */
+    opacity: 1; 
+    margin: 60px auto 20px auto; /* Combined margin settings: 60px top, 20px bottom */
+    padding: 0 20px; 
+    /* background-color: #000000; Removed to match visual target (light background) */
+    color: #FFFFFF; /* Default text color (may need to be changed to dark if page background is light) */
+}
+
+.latest-sound-effects-header .header-left h2 {
+    font-family: 'Saira Condensed', sans-serif;
+    /* font: bold; <-- Removed (Incorrect) */
+    font-size: 56px; 
+    font-weight: 566; /* Similar to hero h1 */
+    color: #1D1F2C; /* Dark gray color for heading */
+    margin: 0; 
+    line-height: 130%; 
+}
+
+.latest-sound-effects-header .header-right {
+    width: 455px;
+    height: 95px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; /* Align paragraph and button group to the right */
+    gap: 18px; 
+}
+
+.latest-sound-effects-header .header-right p {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px; 
+    font-weight: 500;
+    line-height: 160%;
+    color: #8C8C8C; /* Lighter gray for descriptive text */
+    margin: 0; 
+    text-align: right; 
+    max-width: 320px; 
+    /* Force text onto a single line */
+    white-space: nowrap; 
+}
+/* Note: The duplicate .header-right p block was removed here. */
+
+
+.latest-sound-effects-header .buttons-group {
+    display: flex; /* Ensure button group itself is a flex container */
+    gap: 18px; /* Assuming the 'Sound Effects' group is handled by the merged buttons logic */
+}
+.latest-sound-effects-header .filter-icon-btn img {
+    /* KEY CHANGE: Reduced the width and height for a smaller icon */
+    width: 18px; 
+    height: 18px; 
+    object-fit: contain; /* Ensures the image doesn't get distorted */
+}
+
+.latest-sound-effects-header .buttons-group button {
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 8px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1; 
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.latest-sound-effects-header .sound-effects-btn {
+    background-color: #EAEFF2; 
+    color: #1A1A2E; 
+}
+
+.latest-sound-effects-header .sound-effects-btn:hover {
+    background-color: #DFE3E8;
+}
+
+.latest-sound-effects-header .all-sound-effect-btn {
+    background-color: #1A1A2E; 
+    color: #FFFFFF; 
+}
+
+.latest-sound-effects-header .all-sound-effect-btn:hover {
+    background-color: #2c2c47;
+}
+
+/* --- Media Queries (Existing, adjusted for new section) --- */
+@media (max-width: 1024px) {
+    header {
+        padding: 24px 50px; 
+        border-radius: 0;
+    }
+
+    /* --- Adjustments for new section on tablet --- */
+    .latest-sound-effects-header {
+        width: 90%; 
+        height: auto; 
+        flex-direction: column; 
+        text-align: center;
+        margin: 60px auto 0 auto;
+        padding: 20px;
+        background-color: transparent; 
+        color: #1A1A2E; 
+    }
+
+    .latest-sound-effects-header .header-left h2 {
+        font-size: 48px;
+        color: #1A1A2E; 
+        margin-bottom: 20px;
+    }
+
+    .latest-sound-effects-header .header-right {
+        /* Reset fixed dimensions for tablet */
+        width: 90%; 
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; /* Center-align for stacked tablet view */
+    }
+
+    .latest-sound-effects-header .header-right p {
+        text-align: center;
+        max-width: 80%; 
+        color: #555555; 
+        /* RESET: Allow text to wrap on smaller screens */
+        white-space: normal; 
+    }
+
+    .latest-sound-effects-header .buttons-group {
+        flex-direction: row; 
+        margin-top: 10px;
+        /* Ensure buttons are centered if they don't take full width */
+        justify-content: center;
+    }
+    /* --- End new section adjustments --- */
+}
+    /* --- End new section adjustments --- */
+
+
+    .nav-links {
+        gap: 32px; 
+    }
+
+    .hero-video-section {
+        height: 600px; 
+    }
+
+    .hero-content {
+        padding: 15px; 
+        max-width: 90%; 
+    }
+
+    .hero-content h1 {
+        font-size: 55px; 
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 18px; 
+        margin-bottom: 40px;
+    }
+    
+    .explore-btn {
+        margin-top: 50px; 
+    }
+
+    .nav-separator-line {
+        display: none; 
+    }
+    
+    /* GRID: Use percentage positioning for responsiveness */
+    .hero-grid-overlay .line-horizontal-1 {
+        width: 100%; 
+        top: calc(510 / 880 * 100%); 
+        left: 0;
+    }
+
+    .hero-grid-overlay .line-horizontal-2 {
+        width: 100%;
+        top: calc(270 / 880 * 100%); 
+        left: 0;
+    }
+
+    .hero-grid-overlay .line-vertical-1 {
+        height: 100%; 
+        left: calc(1432 / 1920 * 100%); 
+        top: 0;
+    }
+
+    .hero-grid-overlay .line-vertical-2 {
+        height: 100%;
+        left: calc(488 / 1920 * 100%); 
+        top: 0;
+    }
+
+
+
+@media (max-width: 768px) {
+    header {
+        height: 80px;
+        padding: 16px 20px;
+    }
+
+    .logo img {
+        width: 120px; 
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-links {
+        display: flex; 
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 70%; 
+        height: 100vh;
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start; 
+        padding: 100px 30px 20px;
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out; 
+        z-index: 10;
+    }
+    
+    .nav-links.active {
+        right: 0; 
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-home .dot {
+        display: none;
+    }
+
+    .contact-btn {
+        width: 100%; 
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .hero-video-section {
+        height: 400px; 
+        margin-top: -60px; 
+    }
+
+    .hero-content {
+        padding: 10px; 
+        max-width: 95%; 
+    }
+
+    .hero-content h1 {
+        font-size: 38px; 
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 15px; 
+        line-height: 1.3; 
+        margin-bottom: 30px; 
+    }
+
+    .explore-btn {
+        width: 100px; 
+        height: 40px;
+        padding: 10px 18px;
+        font-size: 16px;
+        margin-top: 40px; 
+    }
+
+   
+    .hero-grid-overlay .line-horizontal-1 {
+        top: calc(510 / 880 * 100%); 
+    }
+
+    .hero-grid-overlay .line-horizontal-2 {
+        top: calc(270 / 880 * 100%); 
+    }
+
+    .hero-grid-overlay .line-vertical-1 {
+        left: calc(1432 / 1920 * 100%); 
+    }
+
+    .hero-grid-overlay .line-vertical-2 {
+        left: calc(488 / 1920 * 100%); 
+    }
+
+    /* --- Adjustments for new section on mobile --- */
+    .latest-sound-effects-header {
+        margin: 40px auto 0 auto;
+        padding: 15px;
+    }
+
+    .latest-sound-effects-header .header-left h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .latest-sound-effects-header .header-right {
+        gap: 15px;
+    }
+
+    .latest-sound-effects-header .header-right p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .latest-sound-effects-header .buttons-group {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .latest-sound-effects-header .buttons-group button {
+        width: 100%;
+    }
+   
+}
+
+
+
+
+.sound-card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 4px;
+}
+
+/* Tablet: 2 columns */
+
+
+
+/* --- Sound Card Section Container --- */
+.sound-card-section {
+    max-width: 1300px; /* Keep this max-width for centralizing */
+    margin: 0 auto 60px auto; 
+    padding: 0 20px;
+    display: grid;
+    /* CHANGE 1: Explicitly define 3 equal columns for the max-width desktop view */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+}
+
+
+.sound-card {
+
+    width: 100%; 
+    height: 268px; 
+
+    opacity: 1;
+    border: 1px solid #E6E9EB; 
+    border-radius: 16px;
+    background-color: #F8FAFB;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 10px;
+}
+
+/* The Tablet Media Query needs adjustment now */
+@media (max-width: 1280px) {
+    .sound-card-section {
+        max-width: 900px; 
+        /* CHANGE 3: Force 2 columns at this breakpoint */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+/* The Mobile Media Query remains fine */
+@media (max-width: 768px) {
+    .sound-card-section {
+        /* Force 1 column layout */
+        grid-template-columns: 1fr;
+        /* ... other properties ... */
+    }
+}
+
+/* --- Tablet Layout (Max Width 1280px) 📐 --- */
+@media (max-width: 1280px) {
+    .sound-card-section {
+        /* On smaller screens, allow max-width to shrink slightly */
+        max-width: 900px; 
+        /* The 424px minmax will automatically force 2 columns here */
+    }
+}
+
+
+/* --- Mobile Layout (Max Width 768px) 📱 --- */
+@media (max-width: 768px) {
+    .sound-card-section {
+        /* Force 1 column layout */
+        grid-template-columns: 1fr;
+        padding: 0 16px; /* Reduced padding on mobile */
+    }
+
+    .sound-card {
+     
+        height: auto; /* Allow height to adjust */
+        width: 100%; /* Ensure it fills the single column */
+    }
+
+    /* Adjust player bar width inside the card for smaller screens */
+    .sound-card .card-player {
+        width: 90%; 
+        margin-bottom: 15px;
+    }
+}
+/* --- Sound Card Container --- */
+.sound-card {
+    /* Layout */
+    margin-top: 0px;
+    width: 424px;
+    height: 268px;
+    opacity: 1;
+
+    /* Styling */
+    border: 1px solid #E6E9EB; 
+    border-radius: 16px;
+    background-color: #F8FAFB;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    gap: 10px;
+}
+
+
+.sound-card .card-header {
+    display: flex;
+
+    width: calc(100% - 48px); 
+    height: 80px;
+    align-items: flex-start;
+    padding: 0 24px; 
+    gap: 16px; 
+    margin-bottom: 20px;
+}
+
+.sound-card .card-logo img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 12px;
+    border: 2px solid #FFFFFF;
+    display: block;
+}
+
+.sound-card .card-title {
+    font-family: 'Saira Condensed', sans-serif;
+   
+    height: 62px;
+    font-weight: 600; 
+    font-size: 24px;
+    line-height: 130%;
+    color: #1A1A2E; 
+    margin-bottom: 10px;
+    /* font-style: semibold; - Not a standard CSS property */
+    letter-spacing: 0.005em; 
+    flex-grow: 1; 
+}
+
+
+.sound-card .card-player {
+    /* Center the player bar itself */
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    width: 90%; 
+    
+    height: 48px;
+    border-radius: 24px;
+    background-color: #EAEFF2;
+
+    /* Internal Flex Layout to spread content */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 10px 0 8px; 
+    gap: 10px;
+}
+
+.sound-card .card-player .play-btn {
+    /* Dimensions and Shape */
+    width: 32px;
+    height: 32px;
+    
+    /* Layout and Spacing */
+    padding: 7px 6px 7px 8px; /* Top Right Bottom Left (7px 6px 7px 8px) */
+    
+    /* Appearance */
+    opacity: 1;
+    background-color: transparent; /* Assuming you want no background */
+    border: none;
+    cursor: pointer;
+    
+  
+    transform: rotate(0deg); /* If you need rotation functionality */
+    
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sound-card .card-player .play-btn img {
+
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+.sound-card .card-player .volume-btn {
+    /* Dimensions */
+    width: 20px;
+    height: 20px;
+    
+    /* Appearance */
+    opacity: 1;
+    
+    /* Layout */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+    
+ 
+    transform: rotate(0deg); 
+    
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.sound-card .card-player .volume-btn img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.sound-card .waveform {
+
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+
+}
+
+/* Ensure the image scales correctly within the flex item */
+.sound-card .waveform img {
+    width: 100%; /* Make the image fill the waveform container's width */
+    height: 32px;
+    display: block;
+}
+
+/* Style for the time duration */
+.sound-card .card-player .duration {
+    font-size: 14px;
+    color: #1A1A2E;
+    flex-shrink: 0; /* Prevent time from being compressed */
+}
+
+/* --- Utility Buttons Section (Bottom Strip) --- */
+
+.sound-card .card-utilities {
+    display: flex;
+    border-top: 1px solid #E6E9EB;
+    flex-grow: 1; /* Makes the utility bar fill the remaining height */
+}
+
+.sound-card .utility-btn {
+    width: 33.33%; 
+    height: 100%; /* Fill the height of the utility container */
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #E6E9EB; 
+    font-size: 24px; /* Size for the icon/symbol */
+    color: #1A1A2E;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.sound-card .utility-btn:last-child {
+    border-right: none; /* Remove right border from the last button */
+}
+
+.sound-card .utility-btn:hover {
+    background-color: #EFEFEF;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1024px) {
     header {
         padding: 24px 50px; 
@@ -334,12 +967,7 @@ nav {
         display: none; 
     }
     
-    /* GRID: Use percentage positioning for responsiveness */
-    /* Original desktop lines:
-       line-horizontal-1: top: 510px (of 880px height)
-       line-horizontal-2: top: 270px (of 880px height)
-       line-vertical-1: left: 1432px (of 1920px width)
-       line-vertical-2: left: 488px (of 1920px width)
+  
     */
     .hero-grid-overlay .line-horizontal-1 {
         width: 100%; 
@@ -446,7 +1074,6 @@ nav {
         margin-top: 40px; /* Adjusted margin */
     }
 
-    /* GRID: Re-adjust grid line percentages for the 400px hero height */
     .hero-grid-overlay .line-horizontal-1 {
         /* 510px out of 880px is ~57.95%. Apply this to the new 400px height. */
         top: calc(510 / 880 * 100%); 
