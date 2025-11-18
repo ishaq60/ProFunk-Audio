@@ -198,6 +198,34 @@
     opacity: 1;
 }
 
+/* Ensure header/nav sit above hero/video overlays */
+header {
+    position: relative;
+    z-index: 50;
+}
+
+/* Header / Nav layout to ensure nav links are visible on desktop */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 40px;
+}
+
+.nav-separator-line {
+    width: 1px;
+    height: 40px;
+    background: rgba(0,0,0,0.06);
+}
+
+.nav-links {
+    display: flex; /* reinforce visible layout on desktop */
+    align-items: center;
+    gap: 48px;
+    margin-left: auto; /* push links to the right */
+    z-index: 60; /* ensure links sit above other content */
+}
+
 .nav-links {
     display: flex;
     align-items: center;

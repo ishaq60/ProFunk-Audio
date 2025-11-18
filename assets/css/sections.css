@@ -61,14 +61,14 @@
     z-index: 2; 
 }
 
-/* Base Desktop Grid Lines (Fixed Pixel Positioning) */
+
 .hero-grid-overlay .line-horizontal-1 {
     position: absolute;
     width: 1920px; 
     height: 0;
-    top: 70px;
+    top: 510px; 
     left: 0; 
-    border-top: 1px solid var(--hero-grid-line); 
+    border-top: 1px solid #010101; 
     opacity: 1;
 }
 
@@ -78,7 +78,7 @@
     height: 0;
     top: 270px; 
     left: 0; 
-    border-top: 1px solid var(--hero-grid-line); 
+    border-top: 1px solid #010101; 
     opacity: 1;
 }
 
@@ -88,7 +88,7 @@
     height: 880px; 
     top: 0; 
     left: 1432px; 
-    border-left: 1px solid var(--hero-grid-line);
+    border-left: 1px solid #010101;
     opacity: 1;
     z-index: 2;
 }
@@ -99,7 +99,7 @@
     height: 880px; 
     top: 0;
     left: 488px; 
-    border-left: 1px solid var(--hero-grid-line);
+    border-left: 1px solid #010101;
     opacity: 1;
     z-index: 2;
 }
@@ -135,12 +135,12 @@
     width: 1320px;
     height: 95px; /* Explicit height */
     display: flex;
-    justify-content: space-between; /* Pushes content to opposite ends */
-    align-items: center; /* Vertically center align items */
+    justify-content: space-between; 
+    align-items: center; 
     opacity: 1; 
-    margin: 60px auto 20px auto; /* Combined margin settings: 60px top, 20px bottom */
+    margin: 60px auto 20px auto;
     padding: 0 20px; 
-    /* background-color: #000000; Removed to match visual target (light background) */
+   
     color: var(--white-color); /* Default text color (may need to be changed to dark if page background is light) */
 }
 
@@ -175,12 +175,12 @@
     /* Force text onto a single line */
     white-space: nowrap; 
 }
-/* Note: The duplicate .header-right p block was removed here. */
+
 
 
 .latest-sound-effects-header .buttons-group {
-    display: flex; /* Ensure button group itself is a flex container */
-    gap: 18px; /* Assuming the 'Sound Effects' group is handled by the merged buttons logic */
+    display: flex; 
+    gap: 18px; 
 }
 .latest-sound-effects-header .filter-icon-btn img {
     /* KEY CHANGE: Reduced the width and height for a smaller icon */
@@ -220,7 +220,7 @@
     background-color: var(--hover-dark);
 }
 
-/* --- Media Queries (Existing, adjusted for new section) --- */
+
 @media (max-width: 1024px) {
     /* --- Adjustments for new section on tablet --- */
     .latest-sound-effects-header {
@@ -246,24 +246,24 @@
         height: auto;
         flex-direction: column;
         gap: 20px;
-        align-items: center; /* Center-align for stacked tablet view */
+        align-items: center; 
     }
 
     .latest-sound-effects-header .header-right p {
         text-align: center;
         max-width: 80%; 
         color: var(--secondary-text-color); 
-        /* RESET: Allow text to wrap on smaller screens */
+      
         white-space: normal; 
     }
 
     .latest-sound-effects-header .buttons-group {
         flex-direction: row; 
         margin-top: 10px;
-        /* Ensure buttons are centered if they don't take full width */
+     
         justify-content: center;
     }
-    /* --- End new section adjustments --- */
+
 
     .hero-video-section {
         height: 600px; 
@@ -311,7 +311,7 @@
 
 
 @media (max-width: 768px) {
-    /* --- Adjustments for new section on mobile --- */
+ 
     .latest-sound-effects-header {
         margin: 40px auto 0 auto;
         padding: 15px;

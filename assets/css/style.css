@@ -2,9 +2,7 @@
 
 
 
-/* ======================================= */
-/* 0. GLOBAL RESETS & TYPOGRAPHY IMPORTS   */
-/* ======================================= */
+
 body {
     margin: 0;
     padding: 0;
@@ -12,9 +10,7 @@ body {
     font-family: 'Saira Condensed', sans-serif;
 }
 
-/* ======================================= */
-/* 1. New Section Container (.new-content-section) */
-/* ======================================= */
+
 
 .new-content-section {
     width: 100%;
@@ -32,8 +28,7 @@ body {
     align-items: center; 
     box-sizing: border-box; 
     
-    /* Responsive Padding Adjustment for Small Screens */
-    /* This prevents content from being hidden by the fixed 300px padding */
+  
     @media (max-width: 1024px) {
         padding-left: 20px;
         padding-right: 20px;
@@ -41,9 +36,6 @@ body {
     }
 }
 
-/* ======================================= */
-/* 2. Header Text Wrapper (.section-header-wrapper) */
-/* ======================================= */
 
 .section-header-wrapper {
     width: 455px;
@@ -54,7 +46,6 @@ body {
     text-align: center;
     margin-bottom: 80px; /* Space between header and grid */
 
-    /* Responsive scaling for header text block */
     @media (max-width: 480px) {
         width: 100%; 
         max-width: 320px;
@@ -62,9 +53,7 @@ body {
     }
 }
 
-/* ======================================= */
-/* 3. Title & Subtitle Typography */
-/* ======================================= */
+
 
 .section-title {
     width: fit-content; 
@@ -97,14 +86,12 @@ body {
     }
 }
 
-/* ======================================= */
-/* 4. CARD GRID (.card-section) Layout (3-2-1) */
-/* ======================================= */
+
 
 .card-section {
     display: grid;
     gap: 10px;
-    width: 100%; /* Take full width of its parent (.new-content-section) */
+    width: 100%; 
     max-width: 1320px;
     margin: 0 auto; 
     
@@ -127,9 +114,7 @@ body {
 }
 
 
-/* ======================================= */
-/* 5. INDIVIDUAL CARD (.anime-card) STYLES */
-/* ======================================= */
+
 
 .anime-card {
     /* Critical change: Must be 100% to fill grid cell */
@@ -235,445 +220,816 @@ body {
 
 
 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Saira Condensed', sans-serif;
+            background: #FFFFFF;
+        }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Saira Condensed', sans-serif;
-}
+        /* ======================================= */
+        /* MAIN SECTION CONTAINER */
+        /* ======================================= */
+        .sound-advantages-section {
+            width: 100%;
+            background-color: #F8F2EA;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            border-radius: 60px;
+            min-height: auto;
+        }
 
-/* ======================================= */
-/* 1. Main Section Container (.sound-advantages-section) */
-/* ======================================= */
-.sound-advantages-section {
-    width: 100%;
-    background-color: #F8F2EA; /* Background color from design context */
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    border-radius: 60px;
-    max-height: 580px;
-}
-
-/* ======================================= */
-/* 2. Header and Typography */
-/* ======================================= */
-.advantage-header {
-    text-align: center;
-    margin-bottom: 60px;
-    max-width: 600px;
-}
-
-.advantage-title {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    color: #1D1F2C; 
-    margin: 0 0 10px 0;
-}
-
-.advantage-subtitle {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #777980; 
-    margin: 0;
-}
-
-/* ======================================= */
-/* 3. Advantages Layout Wrapper */
-/* ======================================= */
-.advantages-wrapper {
-    width: 100%;
-    max-width: 1200px; 
-    display: flex;
-  
-    align-items: flex-start; /* Align all cards to the top of the flex row */
-}
-
-/* Responsive stacking for smaller screens */
-@media (max-width: 1024px) {
-    .advantages-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* ======================================= */
-/* 4. Individual Advantage Cards (.advantage-card) */
-/* ======================================= */
-.advantage-card {
-    margin-top: 20px;
-    flex: 1; 
-    padding: 30px; 
-    border-radius: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    
-    /* Base min-height for side cards (230px) */
-    min-height: 230px; 
-}
-
-/* Reset height for mobile stacking */
-@media (max-width: 1024px) {
-    .advantage-card {
-        min-height: auto; /* Allow height to adjust to content */
-        width: 90%; 
-        max-width: 500px;
-    }
-}
-
-/* --- Specific Height Overrides --- */
-
-/* Middle Card (advantage-card-light2) -> Must be 260px */
-.advantage-card-light2 {
-    min-height: 260px; /* Specific height requirement */
-}
-/* Ensure the height reset applies to the specific class on mobile too */
-@media (max-width: 1024px) {
-    .advantage-card-light2 {
-        min-height: auto; 
-    }
-}
-
-/* --- Specific Card Styles (Colors) --- */
-
-/* Dark Card (Professionally Recorded Sounds) */
-.advantage-card-dark {
-    background-color: #1D1F2C; 
-    color: #FFFFFF; 
-}
-.advantage-card-dark .card-feature-description {
-    color: rgba(255, 255, 255, 0.8);
-}
-.advantage-card-dark .icon-container {
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-}
-
-/* Light Card (Safe to use & Excellent support) */
-.advantage-card-light,
-.advantage-card-light2 /* Apply general light styles to both light cards */
-{
-    background-color: #FFFFFF;
-    border: 1px solid #ECEFF3;
-    color: #1D1F2C;
-}
-.advantage-card-light .card-feature-description,
-.advantage-card-light2 .card-feature-description {
-    color: #777980;
-}
-.advantage-card-light .icon-container,
-.advantage-card-light2 .icon-container {
-    background-color: #EAEFF2;
-}
-
-
-/* --- Card Content Styles --- */
-
-.icon-container {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.icon-container img {
-    width: 24px;
-    height: 24px;
-}
-
-.card-feature-title {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    margin: 0 0 10px 0;
-}
-
-.card-feature-description {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    margin: 0;
-}
-
-
-
-
-
-
-/* Update the section container to center the header block */
-.profunk-audio-section {
-    /* ... (rest of profunk-audio-section styles) ... */
-    display: flex;
-    flex-direction: column; /* Stack header and potential grid below */
-    align-items: center; /* Center the header block horizontally */
-    /* ... (rest of profunk-audio-section styles) ... */
-}
-
-.profunk-header-block {
-    width: 1320px; /* Explicit width as requested */
-    height: 114px; /* Explicit height as requested */
-    margin-top: 50px;
-    /* Display: flex and justify-content: space-between to push H2 and P to edges */
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Vertically center content */
-    
-    text-align: center; /* This centers the text *within* H2 and P if they wrap, but the elements themselves are spread */
-    
-    /* Ensure no wrapping padding/margin interferes */
-    box-sizing: border-box; 
-}
-
-.profunk-title {
-    width:539px ;
-    height: 73px;
-    font-size: 56px;
-    color: #1D1F2C;
-    /* Limit the H2 width so it doesn't take up the entire left side */
- 
-    text-align: left; /* Keep title text left aligned within its column */
-    
-    /* === New properties to force single line === */
-    
-    /* =========================================== */
-}
-
-.profunk-description {
-    color: #777980;
-    font-size: 18px;
-    /* Limit the P width so it doesn't take up the entire right side */
-    width: 600px;
-    text-align: right; /* Keep description text right aligned within its column */
-    /* ... (rest of profunk-description styles) ... */
-}
-/* ======================================= */
-/* MAIN CONTAINER - 3 Column Grid */
-/* ======================================= */
-.profunk-side-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  
-    max-width: 1320px;
-    gap:18px
    
-}
+        .advantage-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 600px;
+        }
 
-/* ======================================= */
-/* 1. FIRST GRID CONTAINER (.first-grid) */
-/* ======================================= */
-.first-grid {
-    width: 648px;
-    grid-column: span 2;
-    height: 180px;
-    background: #F8F2EA;
-    padding: 24px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+        .advantage-title {
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #1D1F2C;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
 
-.first-grid img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 18px;
-    display: block;
-    filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
-}
+        .advantage-subtitle {
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #777980;
+            margin: 0;
+            line-height: 1.6;
+        }
 
-/* ======================================= */
-/* 2. TEXT WRAPPER (.grid-text-content) */
-/* ======================================= */
-.grid-text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+     
+        .advantages-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            justify-content: center;
+        }
 
-/* ======================================= */
-/* 3. TITLE (.grid-title) */
-/* ======================================= */
-.grid-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #1D1F2C;
-    margin: 0 0 4px 0;
-    letter-spacing: 0.005em;
-    line-height: 130%;
-}
+      
+        .advantage-card {
+            margin-top: 20px;
+            flex: 1;
+            padding: 30px;
+            border-radius: 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 230px;
+            transition: all 0.3s ease;
+        }
 
-.grid-description {
-    color: #777980;
-    font-size: 18px;
-    font-family: 'Saira Condensed', sans-serif;
-    line-height: 160%;
-    margin: 0;
-}
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
 
-/* ======================================= */
-/* SECOND GRID CONTAINER (.second-grid) */
-/* ======================================= */
-.second-grid {
-    max-width: 312px;
-    height: 180px;
-    background: #F5F5F5;
-    padding: 24px;
-    box-sizing: border-box;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+        /* --- Dark Card --- */
+        .advantage-card-dark {
+            background-color: #1D1F2C;
+            color: #FFFFFF;
+        }
 
-.second-grid img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 18px;
-    display: block;
-    filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
-}
+        .advantage-card-dark .card-feature-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-.grid-title-small {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1D1F2C;
-    margin: 0 0 4px 0;
-    line-height: 130%;
-}
+        .advantage-card-dark .icon-container {
+            background-color: transparent;
+            border: 1px solid #FFFFFF;
+        }
 
-.grid-description-small {
-    font-size: 14px;
-    color: #777980;
-    line-height: 160%;
-    margin: 0;
-}
+        /* --- Light Card 2 (Middle Card - Specific Height) --- */
+        .advantage-card-light2 {
+            background-color: #FFFFFF;
+            border: 1px solid #ECEFF3;
+            color: #1D1F2C;
+            min-height: 260px;
+        }
 
-/* ======================================= */
-/* LAST GRID CONTAINER (.last-grid) */
-/* ======================================= */
-.last-grid {
-    width: 648px;
-    grid-column: span 2;
-    height: 180px;
-    background: #010101;
-    padding: 24px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+        .advantage-card-light2 .card-feature-description {
+            color: #777980;
+        }
 
-.last-grid img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 18px;
-    display: block;
-}
+        .advantage-card-light2 .icon-container {
+            background-color: #EAEFF2;
+        }
 
-.last-grid-text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        /* --- Light Card --- */
+        .advantage-card-light {
+            background-color: #FFFFFF;
+            border: 1px solid #ECEFF3;
+            color: #1D1F2C;
+        }
 
-.last-grid-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin: 0 0 4px 0;
-    letter-spacing: 0.005em;
-    line-height: 130%;
-}
+        .advantage-card-light .card-feature-description {
+            color: #777980;
+        }
 
-.last-grid-description {
-    color: #E9E9EA;
-    font-size: 18px;
-    font-family: 'Saira Condensed', sans-serif;
-    line-height: 160%;
-    margin: 0;
-}
+        .advantage-card-light .icon-container {
+            background-color: #EAEFF2;
+        }
 
+        /* --- Card Content Styles --- */
+        .icon-container {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-container img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .card-feature-title {
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            line-height: 1.3;
+        }
+
+        .card-feature-description {
+            font-family: 'Saira Condensed', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ======================================= */
+        /* TABLET LARGE (1024px and below) */
+        /* ======================================= */
+        @media (max-width: 1024px) {
+            .sound-advantages-section {
+                padding: 80px 30px;
+                border-radius: 40px;
+            }
+
+            .advantage-header {
+                margin-bottom: 50px;
+            }
+
+            .advantage-title {
+                font-size: 40px;
+            }
+
+            .advantage-subtitle {
+                font-size: 16px;
+            }
+
+            .advantages-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .advantage-card {
+                width: 100%;
+                max-width: 500px;
+                min-height: auto;
+                padding: 28px;
+            }
+
+            .advantage-card-light2 {
+                min-height: auto;
+            }
+
+            .card-feature-title {
+                font-size: 22px;
+            }
+
+            .card-feature-description {
+                font-size: 15px;
+            }
+        }
+
+        /* ======================================= */
+        /* TABLET (768px and below) */
+        /* ======================================= */
+        @media (max-width: 768px) {
+            .sound-advantages-section {
+                padding: 60px 20px;
+                border-radius: 30px;
+            }
+
+            .advantage-header {
+                margin-bottom: 40px;
+                max-width: 100%;
+            }
+
+            .advantage-title {
+                font-size: 32px;
+                line-height: 1.3;
+            }
+
+            .advantage-subtitle {
+                font-size: 14px;
+            }
+
+            .advantages-wrapper {
+                gap: 16px;
+            }
+
+            .advantage-card {
+                width: 100%;
+                padding: 24px;
+                border-radius: 12px;
+                margin-top: 10px;
+            }
+
+            .icon-container {
+                width: 44px;
+                height: 44px;
+                margin-bottom: 16px;
+            }
+
+            .icon-container img {
+                width: 22px;
+                height: 22px;
+            }
+
+            .card-feature-title {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+            .card-feature-description {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+
+        /* ======================================= */
+        /* MOBILE (480px and below) */
+        /* ======================================= */
+        @media (max-width: 480px) {
+            .sound-advantages-section {
+                padding: 50px 16px;
+                border-radius: 24px;
+            }
+
+            .advantage-header {
+                margin-bottom: 30px;
+            }
+
+            .advantage-title {
+                font-size: 26px;
+                line-height: 1.3;
+                margin-bottom: 8px;
+            }
+
+            .advantage-subtitle {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .advantages-wrapper {
+                gap: 14px;
+            }
+
+            .advantage-card {
+                width: 100%;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 8px;
+            }
+
+            .icon-container {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 14px;
+            }
+
+            .icon-container img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .card-feature-title {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+
+            .card-feature-description {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+
+        /* ======================================= */
+        /* EXTRA SMALL (360px and below) */
+        /* ======================================= */
+        @media (max-width: 360px) {
+            .sound-advantages-section {
+                padding: 40px 12px;
+            }
+
+            .advantage-title {
+                font-size: 22px;
+            }
+
+            .advantage-subtitle {
+                font-size: 12px;
+            }
+
+            .advantages-wrapper {
+                gap: 12px;
+            }
+
+            .advantage-card {
+                padding: 18px;
+            }
+
+            .card-feature-title {
+                font-size: 16px;
+            }
+
+            .card-feature-description {
+                font-size: 12px;
+            }
+        }
+
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #FFFFFF;
+        }
+
+        /* ======================================= */
+        /* SECTION CONTAINER */
+        /* ======================================= */
+        .profunk-audio-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ======================================= */
+        /* HEADER BLOCK */
+        /* ======================================= */
+        .profunk-header-block {
+            width: 100%;
+            max-width: 1320px;
+            min-height: 114px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .profunk-title {
+            width: 100%;
+            max-width: 539px;
+            min-height: 73px;
+            font-size: 56px;
+            font-weight: 700;
+            color: #1D1F2C;
+            text-align: left;
+            line-height: 1.2;
+        }
+
+        .profunk-description {
+            color: #777980;
+            font-size: 18px;
+            width: 100%;
+            max-width: 600px;
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        /* ======================================= */
+        /* MAIN GRID WRAPPER */
+        /* ======================================= */
+        .profunk-side-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            max-width: 1320px;
+            gap: 18px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* ======================================= */
+        /* FIRST GRID (2 columns) */
+        /* ======================================= */
+        .first-grid {
+            width: 100%;
+            grid-column: span 2;
+            min-height: 180px;
+            background: #F8F2EA;
+            padding: 24px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .first-grid img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            display: block;
+            filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
+        }
+
+        /* ======================================= */
+        /* GRID TEXT CONTENT */
+        /* ======================================= */
+        .grid-text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grid-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1D1F2C;
+            margin: 0 0 4px 0;
+            letter-spacing: 0.005em;
+            line-height: 1.3;
+        }
+
+        .grid-description {
+            color: #777980;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ======================================= */
+        /* SECOND GRID (1 column) */
+        /* ======================================= */
+        .second-grid {
+            width: 100%;
+            min-height: 180px;
+            background: #F5F5F5;
+            padding: 24px;
+            box-sizing: border-box;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .second-grid img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            display: block;
+            filter: invert(0.1) sepia(1) saturate(7000%) hue-rotate(180deg) brightness(0.1);
+        }
+
+        .grid-title-small {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1D1F2C;
+            margin: 0 0 4px 0;
+            line-height: 1.3;
+        }
+
+        .grid-description-small {
+            font-size: 14px;
+            color: #777980;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ======================================= */
+        /* LAST GRID (2 columns) */
+        /* ======================================= */
+        .last-grid {
+            width: 100%;
+            grid-column: span 2;
+            min-height: 180px;
+            background: #010101;
+            padding: 24px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .last-grid img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .last-grid-text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .last-grid-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin: 0 0 4px 0;
+            letter-spacing: 0.005em;
+            line-height: 1.3;
+        }
+
+        .last-grid-description {
+            color: #E9E9EA;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ======================================= */
+        /* TABLET (1024px and below) */
+        /* ======================================= */
+        @media (max-width: 1024px) {
+            .profunk-audio-section {
+                padding: 0 20px;
+            }
+
+            .profunk-header-block {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .profunk-title {
+                font-size: 44px;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .profunk-description {
+                font-size: 16px;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .profunk-side-wrapper {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                margin-top: 30px;
+            }
+
+            .first-grid {
+                grid-column: span 2;
+                min-height: 160px;
+            }
+
+            .last-grid {
+                grid-column: span 2;
+            }
+
+            .grid-title {
+                font-size: 22px;
+            }
+
+            .grid-description {
+                font-size: 16px;
+            }
+        }
+
+        /* ======================================= */
+        /* TABLET SMALL (768px and below) */
+        /* ======================================= */
+        @media (max-width: 768px) {
+            .profunk-audio-section {
+                padding: 0 16px;
+            }
+
+            .profunk-header-block {
+                margin-top: 40px;
+            }
+
+            .profunk-title {
+                font-size: 36px;
+            }
+
+            .profunk-description {
+                font-size: 15px;
+            }
+
+            .profunk-side-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+                margin-top: 25px;
+            }
+
+            .first-grid {
+                grid-column: span 1;
+                min-height: 150px;
+                padding: 20px;
+            }
+
+            .second-grid {
+                min-height: 150px;
+                padding: 20px;
+            }
+
+            .last-grid {
+                grid-column: span 2;
+                min-height: 150px;
+                padding: 20px;
+            }
+
+            .grid-title {
+                font-size: 20px;
+                margin-bottom: 2px;
+            }
+
+            .grid-description {
+                font-size: 14px;
+            }
+
+            .grid-title-small {
+                font-size: 18px;
+            }
+
+            .grid-description-small {
+                font-size: 12px;
+            }
+
+            .last-grid-title {
+                font-size: 20px;
+            }
+
+            .last-grid-description {
+                font-size: 14px;
+            }
+
+            .first-grid img,
+            .second-grid img,
+            .last-grid img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* ======================================= */
+        /* MOBILE (480px and below) */
+        /* ======================================= */
+        @media (max-width: 480px) {
+            .profunk-audio-section {
+                padding: 0 12px;
+            }
+
+            .profunk-header-block {
+                margin-top: 30px;
+                gap: 15px;
+            }
+
+            .profunk-title {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+
+            .profunk-description {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .profunk-side-wrapper {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+
+            .first-grid {
+                grid-column: span 1;
+                min-height: 140px;
+                padding: 18px;
+                border-radius: 10px;
+            }
+
+            .second-grid {
+                min-height: 140px;
+                padding: 18px;
+                border-radius: 10px;
+            }
+
+            .last-grid {
+                grid-column: span 1;
+                min-height: 140px;
+                padding: 18px;
+                border-radius: 10px;
+            }
+
+            .grid-title {
+                font-size: 18px;
+                margin-bottom: 2px;
+            }
+
+            .grid-description {
+                font-size: 13px;
+            }
+
+            .grid-title-small {
+                font-size: 16px;
+            }
+
+            .grid-description-small {
+                font-size: 12px;
+            }
+
+            .last-grid-title {
+                font-size: 18px;
+            }
+
+            .last-grid-description {
+                font-size: 13px;
+            }
+
+            .first-grid img,
+            .second-grid img,
+            .last-grid img {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* ======================================= */
+        /* EXTRA SMALL (360px and below) */
+        /* ======================================= */
+        @media (max-width: 360px) {
+            .profunk-title {
+                font-size: 24px;
+            }
+
+            .profunk-description {
+                font-size: 12px;
+            }
+
+            .profunk-side-wrapper {
+                gap: 10px;
+            }
+
+            .first-grid,
+            .second-grid,
+            .last-grid {
+                padding: 16px;
+                min-height: 130px;
+            }
+
+            .grid-title {
+                font-size: 16px;
+            }
+
+            .grid-description {
+                font-size: 12px;
+            }
+
+            .grid-title-small {
+                font-size: 15px;
+            }
+
+            .grid-description-small {
+                font-size: 11px;
+            }
+        }
 
 banner-up{
     margin-top: 80px;
 }
-
-
-.stay-inspired-banner {
-    margin-top: 80px;
-    width: 1320px;
-    height: 423px;
-    padding: 80px 364px 100px 364px;
-    border-radius: 16px;
-    background-position: center;
-    background-size: cover;
-    box-sizing: border-box; 
-    margin: 80px auto 0 auto;
-    background-image: 
-        linear-gradient(247.95deg, rgba(0, 0, 0, 0) 8.62%, rgba(0, 0, 0, 0.5) 36.02%),
-        url('/assets/images/stay connected.png'); 
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Container for text and button */
-.banner-content {
-    margin-top: 0;
-    width: 592px;
-    color: white; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Title Styling */
-.banner-title {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 16px 0;
-}
-
-/* Description Styling */
-.banner-description {
-    font-size: 18px;
-    margin: 0 0 30px 0;
-}
-
-/* Button Styling */
-.access-button {
-    width: 195px;
-    height: 48px;
-    font-size: 18px;
-    padding: 10px 32px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-
-
-
 
  * {
             margin: 0;
@@ -684,6 +1040,195 @@ banner-up{
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
+
+        .banner-up {
+            margin-top: 80px;
+        }
+
+        .stay-inspired-banner {
+            margin-top: 80px;
+            width: 100%;
+            max-width: 1320px;
+            min-height: 423px;
+            padding: 80px 364px 100px 364px;
+            border-radius: 16px;
+            background-position: center;
+            background-size: cover;
+            box-sizing: border-box;
+            margin: 80px auto 0 auto;
+            background-image: 
+                linear-gradient(247.95deg, rgba(0, 0, 0, 0) 8.62%, rgba(0, 0, 0, 0.5) 36.02%),
+                url('/assets/images/stay connected.png'); 
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container for text and button */
+        .banner-content {
+            margin-top: 0;
+            width: 100%;
+            max-width: 592px;
+            color: white; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .banner-title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 16px 0;
+        }
+
+        /* Description Styling */
+        .banner-description {
+            font-size: 18px;
+            margin: 0 0 30px 0;
+            line-height: 1.6;
+        }
+
+        /* Button Styling */
+        .access-button {
+            width: 195px;
+            height: 48px;
+            font-size: 18px;
+            padding: 10px 32px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .access-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Tablet Breakpoint (1024px and below) --- */
+        @media (max-width: 1024px) {
+            .stay-inspired-banner {
+                padding: 60px 100px;
+                min-height: 380px;
+                margin-top: 60px;
+            }
+
+            .banner-title {
+                font-size: 44px;
+            }
+
+            .banner-description {
+                font-size: 16px;
+            }
+        }
+
+        /* --- Tablet Breakpoint (768px and below) --- */
+        @media (max-width: 768px) {
+            .banner-up {
+                margin-top: 60px;
+            }
+
+            .stay-inspired-banner {
+                padding: 50px 40px;
+                min-height: 340px;
+                margin-top: 60px;
+                border-radius: 12px;
+            }
+
+            .banner-content {
+                max-width: 100%;
+            }
+
+            .banner-title {
+                font-size: 36px;
+                margin-bottom: 12px;
+            }
+
+            .banner-description {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .access-button {
+                width: 170px;
+                height: 44px;
+                font-size: 16px;
+                padding: 8px 24px;
+            }
+        }
+
+        /* --- Mobile Breakpoint (480px and below) --- */
+        @media (max-width: 480px) {
+            .banner-up {
+                margin-top: 40px;
+            }
+
+            .stay-inspired-banner {
+                padding: 40px 24px;
+                min-height: 300px;
+                margin-top: 40px;
+                border-radius: 12px;
+            }
+
+            .banner-title {
+                font-size: 28px;
+                margin-bottom: 12px;
+                line-height: 1.3;
+            }
+
+            .banner-description {
+                font-size: 14px;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+
+            .access-button {
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                padding: 8px 20px;
+                border-radius: 6px;
+            }
+        }
+
+        /* --- Extra Small Mobile (360px and below) --- */
+        @media (max-width: 360px) {
+            .stay-inspired-banner {
+                padding: 30px 16px;
+                min-height: 280px;
+                margin-top: 30px;
+            }
+
+            .banner-title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .banner-description {
+                font-size: 13px;
+                margin-bottom: 18px;
+            }
+
+            .access-button {
+                width: 140px;
+                height: 36px;
+                font-size: 13px;
+                padding: 6px 18px;
+            }
+        }
+
+
+
+
 
         :root {
             --color-black: #070707;
@@ -1035,3 +1580,186 @@ banner-up{
             }
         }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+ 
+    font-family: 'Saira Condensed', sans-serif; 
+}
+
+
+
+
+header {
+    width: 100%;
+    height: 104px;
+    background: #FFFFFF;
+    padding: 24px 300px;
+    display: flex;
+    align-items: center;
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 146px; 
+    height: 56px;
+    opacity: 1;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links li {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-home .dot {
+    width: 6px;
+    height: 6px;
+    background: #1A1A2E;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+.nav-item {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    color: #1D1F2C;
+    text-decoration: none;
+}
+
+
+.contact-btn {
+    width: 112px; 
+    height: 48px;
+    border-radius: 8px;
+    background: #1A1A2E;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20; 
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: #1A1A2E;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        padding: 24px 50px; 
+    }
+
+    .nav-links {
+        gap: 32px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        height: 80px;
+        padding: 16px 20px;
+    }
+
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+   
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        
+        width: 70%; 
+        height: 100vh;
+        
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start; 
+        
+        padding: 100px 30px 20px;
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+
+    .nav-home .dot {
+        display: none;
+    }
+
+
+    .contact-btn {
+        width: 100%; 
+        margin-top: 15px;
+        padding: 20px;
+ 
+        text-align: center;
+    }
+    
+
+    .nav-links.active {
+        right: 0; /* Slides menu into view */
+    }
+}
