@@ -1,11 +1,11 @@
 # Frontend Task
 
-This project aims to implement a landing page following the provided design guidelines and technology restrictions.
+This project implements the front-end design for "ProFunk Audio," an online library specializing in high-quality, royalty-free sound effects (SFX) and music tracks.
 
 ## Project Structure
 
 ```
-landing-page/
+ProFunk Audio/
 │
 ├── index.html
 │
