@@ -40,21 +40,18 @@
 
 .sound-card .card-title {
     font-family: 'Saira Condensed', sans-serif;
-   
     height: 62px;
     font-weight: 600; 
     font-size: 24px;
     line-height: 130%;
     color: #1A1A2E; 
     margin-bottom: 10px;
-    /* font-style: semibold; - Not a standard CSS property */
     letter-spacing: 0.005em; 
     flex-grow: 1; 
 }
 
 
 .sound-card .card-player {
-    /* Center the player bar itself */
     margin-left: auto;
     margin-right: auto;
     
@@ -65,7 +62,6 @@
     border-radius: 24px;
     background-color: var(--hover-light);
 
-    /* Internal Flex Layout to spread content */
     display: flex;
     align-items: center; 
     justify-content: space-between; 
@@ -73,24 +69,17 @@
     gap: 10px;
 }
 
-.sound-card .card-player .play-btn {
-    /* Dimensions and Shape */
+.sound-card .play-btn {
     width: 32px;
     height: 32px;
-    
-    /* Layout and Spacing */
-    padding: 7px 6px 7px 8px; /* Top Right Bottom Left (7px 6px 7px 8px) */
-    
-    /* Appearance */
+    padding: 7px 6px 7px 8px;
     opacity: 1;
-    background-color: transparent; /* Assuming you want no background */
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
     
-  
-    transform: rotate(0deg); /* If you need rotation functionality */
-    
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,20 +95,13 @@
 
 
 .sound-card .card-player .volume-btn {
-    /* Dimensions */
     width: 20px;
     height: 20px;
-    
-    /* Appearance */
     opacity: 1;
-    
-    /* Layout */
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0; 
-    
- 
+    padding: 0;
     transform: rotate(0deg); 
     
   
@@ -145,18 +127,16 @@
 
 }
 
-/* Ensure the image scales correctly within the flex item */
 .sound-card .waveform img {
-    width: 100%; /* Make the image fill the waveform container's width */
+    width: 100%;
     height: 32px;
     display: block;
 }
 
-/* Style for the time duration */
 .sound-card .card-player .duration {
     font-size: 14px;
     color: var(--primary-text-color);
-    flex-shrink: 0; /* Prevent time from being compressed */
+    flex-shrink: 0;
 }
 
 
@@ -173,18 +153,24 @@
     background-color: transparent;
     border: none;
     border-right: 1px solid var(--border-color); 
-    font-size: 24px; /* Size for the icon/symbol */
+    font-size: 24px;
     color: var(--primary-text-color);
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
     
     display: flex; 
     align-items: center;
     justify-content: center;
 }
 
+.sound-card .utility-btn:hover {
+    background-color: rgba(26, 26, 46, 0.05);
+    transform: scale(1.1);
+    color: var(--hover-dark);
+}
+
 .sound-card .utility-btn:last-child {
-    border-right: none; /* Remove right border from the last button */
+    border-right: none;
 }
 
 .sound-card .utility-btn:hover {
@@ -196,15 +182,14 @@
     width: 180px; 
     height: 86px;
     opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Ensure header/nav sit above hero/video overlays */
 header {
     position: relative;
     z-index: 50;
 }
 
-/* Header / Nav layout to ensure nav links are visible on desktop */
 header nav {
     display: flex;
     align-items: center;
@@ -219,11 +204,11 @@ header nav {
 }
 
 .nav-links {
-    display: flex; /* reinforce visible layout on desktop */
+    display: flex;
     align-items: center;
     gap: 48px;
-    margin-left: auto; /* push links to the right */
-    z-index: 60; /* ensure links sit above other content */
+    margin-left: auto;
+    z-index: 60;
 }
 
 .nav-links {
@@ -233,6 +218,7 @@ header nav {
     gap: 48px;
     margin: 0;
     padding: 0;
+    transition: right 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -257,7 +243,7 @@ header nav {
     line-height: 160%;
     color: var(--primary-text-color);
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 .nav-item:hover {
     color: var(--hover-dark);
@@ -278,7 +264,7 @@ header nav {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, transform 0.3s ease;
 }
 .contact-btn:hover {
     background: var(--hover-dark);
@@ -328,11 +314,12 @@ header nav {
     font-weight: 400;
     line-height: 1; 
     text-align: center;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .explore-btn:hover {
-    background: var(--white-color)20; 
+    background: var(--white-color)20;
+    transform: translateY(-2px);
 }
 
 .explore-btn .arrow-icon {
@@ -340,7 +327,6 @@ header nav {
     line-height: 1;
 }
 
-/* --- Media Queries (Existing, adjusted for new section) --- */
 @media (max-width: 1024px) {
     .nav-links {
         gap: 32px; 

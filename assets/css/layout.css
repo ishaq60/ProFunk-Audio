@@ -1,9 +1,8 @@
 .sound-card-section {
-    max-width: 1300px; /* Keep this max-width for centralizing */
+    max-width: 1300px;
     margin: 0 auto 60px auto;
     padding: 0 20px;
     display: grid;
-    /* CHANGE 1: Explicitly define 3 equal columns for the max-width desktop view */
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
@@ -21,46 +20,30 @@
     flex-direction: column;
     padding-top: 24px;
     gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* The Tablet Media Query needs adjustment now */
+.sound-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 1280px) {
     .sound-card-section {
         max-width: 900px;
-        /* CHANGE 3: Force 2 columns at this breakpoint */
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .sound-card-section {
-        /* Force 1 column layout */
         grid-template-columns: 1fr;
-        /* ... other properties ... */
-    }
-}
-/* --- Tablet Layout (Max Width 1280px) 📐 --- */
-@media (max-width: 1280px) {
-    .sound-card-section {
-        /* On smaller screens, allow max-width to shrink slightly */
-        max-width: 900px;
-        /* The 424px minmax will automatically force 2 columns here */
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .sound-card-section {
-        /* Force 1 column layout */
-        grid-template-columns: 1fr;
-        padding: 0 16px; /* Reduced padding on mobile */
+        padding: 0 16px;
     }
 
     .sound-card {
-
-        height: auto; /* Allow height to adjust */
-        width: 100%; /* Ensure it fills the single column */
+        height: auto;
+        width: 100%;
     }
 
     .sound-card .card-player {

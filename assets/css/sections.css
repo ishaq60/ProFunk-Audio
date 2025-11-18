@@ -113,6 +113,18 @@
     max-width: 800px; 
     padding: 20px;
     gap: 12px;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content h1 {
@@ -204,20 +216,26 @@
 
 .latest-sound-effects-header .sound-effects-btn {
     background-color: var(--hover-light); 
-    color: var(--primary-text-color); 
+    color: var(--primary-text-color);
+    transition: all 0.3s ease;
 }
 
 .latest-sound-effects-header .sound-effects-btn:hover {
-    background-color: var(--hover-light);
+    background-color: #c8d1d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .latest-sound-effects-header .all-sound-effect-btn {
     background-color: var(--dark-background); 
-    color: var(--white-color); 
+    color: var(--white-color);
+    transition: all 0.3s ease;
 }
 
 .latest-sound-effects-header .all-sound-effect-btn:hover {
     background-color: var(--hover-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -510,22 +528,20 @@
         /* ======================================= */
         /* IMAGE CARD */
         /* ======================================= */
-        .image-card {
-            min-height: 280px;
-            border-radius: 16px;
-            padding: 24px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background-size: cover;
-            background-position: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .image-card:hover {
+.image-card {
+    min-height: 280px;
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}        .image-card:hover {
             transform: scale(1.02);
         }
 
