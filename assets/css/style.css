@@ -148,7 +148,7 @@ body {
     width: calc(100% - 48px); 
     max-width: 376px;
     margin: 0 auto; 
-    padding: 0; /* Remove padding here, use margin auto for spacing */
+    padding: 0; 
     
     display: flex;
     flex-direction: column;
@@ -163,6 +163,14 @@ body {
     margin-top: 10px; 
 }
 
+.card-title-row .card-title{
+    color: #1D1F2C;
+}
+.card-title-row img {
+    width: 24px;
+    height: 24px; /* Added height for confirmation */
+    object-fit: contain; /* Ensures the image fits within the bounds */
+}
 
 
 .card-description {
@@ -176,7 +184,7 @@ body {
     overflow: hidden;
 }
 
-/* Button Styles */
+
 .card-read-more {
     width: 100%; 
     height: 48px;
@@ -232,24 +240,14 @@ body {
 
 
 
+/* sound Advantige section */
 
 
 
 
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Saira Condensed', sans-serif;
-            background: #FFFFFF;
-        }
 
-        /* ======================================= */
-        /* MAIN SECTION CONTAINER */
-        /* ======================================= */
+ 
         .sound-advantages-section {
             width: 100%;
             background-color: #F8F2EA;
@@ -330,7 +328,7 @@ body {
             border: 1px solid #FFFFFF;
         }
 
-        /* --- Light Card 2 (Middle Card - Specific Height) --- */
+
         .advantage-card-light2 {
             background-color: #FFFFFF;
             border: 1px solid #ECEFF3;
@@ -1631,8 +1629,8 @@ nav {
 
 
 .logo img {
-    width: 146px; 
-    height: 56px;
+    width: 200px; 
+    height: 80px;
     opacity: 1;
 }
 

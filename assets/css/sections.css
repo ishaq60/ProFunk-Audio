@@ -33,6 +33,7 @@
     width: 100%;
     height: 100%;
     background-color: #00000033;
+    backdrop-filter: blur(0px);
     z-index: 0;
 }
 
@@ -145,7 +146,7 @@
 
 .latest-sound-effects-header {
     width: 1320px;
-    height: 95px; /* Explicit height */
+    height: 95px;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -153,15 +154,14 @@
     margin: 60px auto 20px auto;
     padding: 0 20px; 
    
-    color: var(--white-color); /* Default text color (may need to be changed to dark if page background is light) */
+    color: var(--white-color);
 }
 
 .latest-sound-effects-header .header-left h2 {
     font-family: 'Saira Condensed', sans-serif;
-    /* font: bold; <-- Removed (Incorrect) */
     font-size: 56px; 
-    font-weight: 566; /* Similar to hero h1 */
-    color: var(--primary-text-color); /* Dark gray color for heading */
+    font-weight: 566;
+    color: var(--primary-text-color);
     margin: 0; 
     line-height: 130%; 
 }
@@ -171,7 +171,7 @@
     height: 95px;
     display: flex;
     flex-direction: column; 
-    align-items: flex-end; /* Align paragraph and button group to the right */
+    align-items: flex-end;
     gap: 18px; 
 }
 
@@ -180,11 +180,10 @@
     font-size: 18px; 
     font-weight: 500;
     line-height: 160%;
-    color: var(--secondary-text-color); /* Lighter gray for descriptive text */
+    color: var(--secondary-text-color);
     margin: 0; 
     text-align: right; 
     max-width: 320px; 
-    /* Force text onto a single line */
     white-space: nowrap; 
 }
 
@@ -195,10 +194,9 @@
     gap: 18px; 
 }
 .latest-sound-effects-header .filter-icon-btn img {
-    /* KEY CHANGE: Reduced the width and height for a smaller icon */
     width: 18px; 
     height: 18px; 
-    object-fit: contain; /* Ensures the image doesn't get distorted */
+    object-fit: contain;
 }
 
 .latest-sound-effects-header .buttons-group button {
@@ -240,7 +238,6 @@
 
 
 @media (max-width: 1024px) {
-    /* --- Adjustments for new section on tablet --- */
     .latest-sound-effects-header {
         width: 90%; 
         height: auto; 
@@ -259,7 +256,6 @@
     }
 
     .latest-sound-effects-header .header-right {
-        /* Reset fixed dimensions for tablet */
         width: 90%; 
         height: auto;
         flex-direction: column;
@@ -396,12 +392,6 @@
         left: calc(488 / 1920 * 100%); 
     }
 }
-
-
-
-
-
-
 
 
 
