@@ -211,7 +211,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #EAEFF2; /* Added background */
+  
     border: none;
     display: flex;
     align-items: center;
@@ -220,10 +220,6 @@ body {
     cursor: pointer;
 }
 
-.card-icon-btn img {
-    width: 20px;
-    height: 20px;
-}
 
 
 
@@ -669,4 +665,172 @@ banner-up{
     border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
+}
+
+
+
+
+
+/* Base Styles */
+:root {
+    --color-black: #070707;
+    --color-white: #FFFFFF;
+    --color-grey: #b0b0b0;
+}
+
+/* --- Footer Block (Outer Container) --- */
+.profunk-footer {
+  margin-top: 100px;
+    position: relative; 
+    width: 1920px; 
+    height: 470px; 
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: var(--color-black);
+    padding: 0; 
+}
+
+/* --- Content Wrapper (Inner Container) --- */
+.footer-content-wrapper {
+    /* Based on (434px + 100px + 677px) = 1211px total width */
+    position: absolute; 
+    width: 1211px; /* Total calculated width of content + gap */
+    height: 390px; 
+    top: 80px; 
+    left: 300px; /* Positioned from the edge of the 1920px container */
+    
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+
+    /* Primary Flexbox to handle the two main groups (Logo and Right Columns) */
+    display: flex;
+    justify-content: flex-start; /* Start columns from the left */
+    gap: 100px; /* Gap between the Logo section and the Right Group */
+    box-sizing: border-box;
+}
+
+/* --- Left Column Group (Logo/Description) --- */
+.footer-logo-section {
+    width: 434px; /* Specified fixed width for the first group */
+    height: 322px; /* Specified fixed height */
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.footer-logo-desc {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-grey);
+    max-width: 434px;
+    margin-bottom: 70px; /* Adjusted to fit content better within 322px height */
+}
+
+.copy-right {
+    margin-top: 100px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-white);
+}
+
+
+.right-side-grid-group {
+    width: 677px; /* Specified fixed width for the second group */
+    height: 322px; /* Specified fixed height */
+    
+
+    display: flex;
+    justify-content: space-between; /* Spacing out the 3 columns inside the 677px width */
+    align-items: flex-start;
+}
+
+/* Individual Link Sections (Quick Link & Sound Effects) */
+.footer-section {
+    /* Let the space-between property handle the distribution */
+    min-width: 130px; 
+}
+
+/* Contact/Let's Talk section */
+.footer-contact-section {
+    /* Let the space-between property handle the distribution */
+    min-width: 250px;
+    text-align: right; /* Align content to the right edge of this section */
+}
+.contact-info-class{
+    display: flex;
+    gap: 14px;
+}
+/* --- Text/Link Styling (General) --- */
+.footer-section-title {
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--color-white);
+    margin-bottom: 32px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    text-align: left; /* Override parent alignment for links */
+}
+
+.footer-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color-grey);
+    line-height: 160%;
+    transition: color 0.2s;
+}
+
+/* --- Contact Specific Styling --- */
+.contact-email {
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 130%;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-white); 
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.contact-info {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-grey);
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+/* --- Social Links (Bottom Right) --- */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 100px; /* Pushes the social links to the bottom, aligning with the copyright text */
+    justify-content: flex-end; /* Push items to the right */
+}
+
+.quick-link-text {
+    font-size: 16px;
+    color: var(--color-white);
+    margin-right: 10px;
+}
+
+.social-links a {
+    /* Style for social icons (assuming images or styled divs) */
+    width: 32px;
+    height: 32px;
+    background: var(--color-white); /* Placeholder background */
+    border-radius: 4px;
 }
